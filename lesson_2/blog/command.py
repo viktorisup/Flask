@@ -1,19 +1,15 @@
-from blog.app import app, db
+from blog.app import db
+from wsgi import app
 
-if __name__ == "__main__":
-    app.run(
-        host="0.0.0.0",
-        debug=True,
-    )
 
-# @app.cli.command("init-db")
-# def init_db():
-#     """
-#     Run in your terminal:
-#     flask init-db
-#     """
-#     db.create_all()
-#     print("done!")
+@app.cli.command("init-db")
+def init_db():
+    """
+    Run in your terminal:
+    flask init-db
+    """
+    db.create_all()
+    print("done!")
 
 
 @app.cli.command("create-users")
