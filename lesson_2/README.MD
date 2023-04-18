@@ -1,2 +1,2 @@
-# Flask
-GB Flask
+# gb_flask
+GeekBrains Flask
